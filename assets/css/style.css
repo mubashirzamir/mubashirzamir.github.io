@@ -38,8 +38,20 @@
     gap: 10px;
 }
 
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 .card {
     border: 1px solid #E4E4E4;
     padding: 20px;
     gap: 10px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
