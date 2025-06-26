@@ -21,7 +21,7 @@ body,
     background-color: var(--bg-color);
     color: var(--text-color);
     font-family: monospace;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    /*transition: background-color 0.3s ease, color 0.3s ease;*/
 }
 
 a {
@@ -87,7 +87,7 @@ footer {
     margin-top: 10px;
     cursor: pointer;
     font-family: monospace;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    /*transition: background-color 0.3s ease, color 0.3s ease;*/
 }
 
 #theme-toggle:hover,
