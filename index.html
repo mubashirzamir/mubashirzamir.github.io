@@ -1,18 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Mubashir Zamir</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="icon" href="./assets/favicon/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="./assets/favicon/apple-touch-icon.png">
-    <meta name="description" content="Portfolio of Mubashir Zamir, showcasing projects and contact information.">
-    <meta name="keywords" content="Mubashir Zamir, portfolio, projects, web developer, software engineer">
-    <meta name="author" content="Mubashir Zamir">
+    <link rel="stylesheet" href="assets/css/style.css"/>
+    <link rel="icon" href="./assets/favicon/favicon.ico" type="image/x-icon"/>
+    <link rel="apple-touch-icon" href="./assets/favicon/apple-touch-icon.png"/>
+    <meta
+            name="description"
+            content="Portfolio of Mubashir Zamir, showcasing projects and contact information."
+    />
+    <meta
+            name="keywords"
+            content="Mubashir Zamir, portfolio, projects, web developer, software engineer"
+    />
+    <meta name="author" content="Mubashir Zamir"/>
 </head>
 <body class="container">
 <div class="wrapper">
+    <div class="toggle-wrapper">
+        <input
+                type="checkbox"
+                id="dark-mode-toggle"
+                name="dark-mode-toggle"
+                class="toggle-input"
+                aria-checked="false"
+                aria-label="Toggle dark mode"
+        />
+        <label for="dark-mode-toggle" class="toggle-label">Dark Mode</label>
+    </div>
+    <hr/>
     <div class="profile" aria-label="Profile section">
         <img
                 class="profile-picture"
@@ -139,8 +157,36 @@
         </div>
     </div>
 </div>
-</body>
+
 <footer aria-label="Footer with copyright">
     <p>&copy; 2025 Mubashir Zamir. All rights reserved.</p>
 </footer>
+
+<script>
+    const toggle = document.getElementById("dark-mode-toggle");
+    const body = document.body;
+
+    function applyTheme(isDark) {
+        body.classList.toggle("dark-mode", isDark);
+        toggle.checked = isDark;
+        toggle.setAttribute("aria-checked", isDark.toString());
+    }
+
+    const storedTheme = localStorage.getItem("theme");
+
+    if (storedTheme) {
+        applyTheme(storedTheme === "dark");
+    } else {
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        applyTheme(prefersDark);
+    }
+
+    toggle.addEventListener("change", () => {
+        const isDark = toggle.checked;
+        applyTheme(isDark);
+        localStorage.setItem("theme", isDark ? "dark" : "light");
+    });
+</script>
+
+</body>
 </html>
