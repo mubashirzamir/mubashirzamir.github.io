@@ -13,25 +13,28 @@
 </head>
 <body class="container">
 <div class="wrapper">
-    <div class="profile">
+    <div class="profile" aria-label="Profile section">
         <img
                 class="profile-picture"
                 src="assets/images/profile-640.webp"
                 srcset="assets/images/profile-320.webp 320w, assets/images/profile-640.webp 640w, assets/images/profile-1024.webp 1024w"
                 sizes="(max-width: 600px) 320px, (max-width: 900px) 640px, 1024px"
-                alt="Profile picture"
+                alt="Profile picture of Mubashir Zamir"
         />
         <h1 class="name"><strong>Mubashir Zamir</strong></h1>
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/mubashir-zamir-96b9491b4/" target="_blank">LinkedIn</a>
-            <a href="https://github.com/mubashirzamir" target="_blank">GitHub</a>
-            <a href="assets/misc/resume.pdf" target="_blank">Resume</a>
+        <div class="social-links" aria-label="Social media and resume links">
+            <a href="https://www.linkedin.com/in/mubashir-zamir-96b9491b4/" target="_blank"
+               aria-label="LinkedIn profile">LinkedIn</a>
+            <a href="https://github.com/mubashirzamir" target="_blank" aria-label="GitHub profile">GitHub</a>
+            <a href="assets/misc/resume.pdf" target="_blank" aria-label="Resume in PDF format">Resume</a>
         </div>
-        <p><a href="mailto:zamir.mubashir@gmail.com">zamir.mubashir@gmail.com</a></p>
+        <p><a href="mailto:zamir.mubashir@gmail.com" aria-label="Email Mubashir Zamir">zamir.mubashir@gmail.com</a></p>
     </div>
-    <div class="projects">
+
+    <div class="projects" aria-label="Projects section">
         <h2>Projects</h2>
-        <div id="word-matrix" class="card">
+
+        <div id="word-matrix" class="card" aria-label="Word Matrix project">
             <h3>Word Matrix</h3>
             <p>A wordle inspired daily game built with Typescript and Next.js.</p>
             <h3>Technologies</h3>
@@ -43,14 +46,14 @@
             </ul>
             <h3>Links</h3>
             <ul>
-                <li><a class="project-link live-link" href="https://word-matrix.vercel.app" target="_blank">Live</a>
-                </li>
+                <li><a class="project-link live-link" href="https://word-matrix.vercel.app" target="_blank"
+                       aria-label="Live version of Word Matrix">Live</a></li>
                 <li><a class="project-link live-link" href="https://github.com/mubashirzamir/matrix?tab=readme-ov-file"
-                       target="_blank">Source</a></li>
+                       target="_blank" aria-label="Source code for Word Matrix on GitHub">Source</a></li>
             </ul>
         </div>
 
-        <div id="aquasync" class="card">
+        <div id="aquasync" class="card" aria-label="AquaSync project">
             <h3>AquaSync</h3>
             <p>AquaSync helps users estimate how much rainwater they can recycle using real-time location data.</p>
             <h3>Technologies</h3>
@@ -62,19 +65,46 @@
             </ul>
             <h3>Links</h3>
             <ul>
-                <li><a class="project-link live-link" href="https://dreamcode-roan.vercel.app/" target="_blank">Live</a>
-                </li>
-                <li><a class="project-link live-link" href="https://github.com/mubashirzamir/dreamcode" target="_blank">Source</a>
-                </li>
+                <li><a class="project-link live-link" href="https://dreamcode-roan.vercel.app/" target="_blank"
+                       aria-label="Live version of AquaSync">Live</a></li>
+                <li><a class="project-link live-link" href="https://github.com/mubashirzamir/dreamcode" target="_blank"
+                       aria-label="Source code for AquaSync on GitHub">Source</a></li>
             </ul>
         </div>
 
-        <div id="blog" class="card">
+        <div id="hijri-applet" class="card" aria-label="Hijri Date Applet for Cinnamon">
+            <h3>Hijri Date Applet for Cinnamon Desktop Environment</h3>
+            <p>
+                A Cinnamon desktop panel applet that displays the current Hijri (Islamic) date using the
+                <a href="https://aladhan.com/prayer-times-api" target="_blank" aria-label="Aladhan API website">Aladhan
+                    API</a>.
+                The date updates automatically at a configurable interval and supports both Arabic and English display.
+            </p>
+            <h3>Technologies</h3>
+            <ul>
+                <li>GNOME Javascript (GJS)</li>
+                <li>Cinnamon Applet Framework</li>
+            </ul>
+            <h3>Links</h3>
+            <ul>
+                <li><a class="project-link live-link" href="https://github.com/mubashirzamir/hijri-applet"
+                       target="_blank" aria-label="GitHub repository for Hijri Date Applet">Source</a></li>
+                <li><a class="project-link extra-link"
+                       href="https://github.com/linuxmint/cinnamon-spices-applets/pull/7361"
+                       target="_blank" aria-label="Pull request to the official Cinnamon Spices repository">
+                    Pull request submitted to the official Cinnamon Spices repository
+                </a></li>
+
+            </ul>
+        </div>
+
+
+        <div id="blog" class="card" aria-label="Dil-o-Dimagh blog project">
             <h3>Dil-o-Dimagh <em>(Translation: Heart & Brain)</em></h3>
             <p>My personal blog powered by Hugo, living inside my Obsidian vault. If you are interested in creating a
                 similar setup, this <a
                         href="https://santacloud.dev/posts/creating-my-blog---a-developers-tale-of-over-engineering-using-obsidian-hugo-and-github-pages/#dead-eyed-tutorial"
-                        target="_blank">guide</a>
+                        target="_blank" aria-label="External tutorial for setting up a blog with Obsidian and Hugo">guide</a>
                 is a Godsend.
             </p>
             <h3>Technologies</h3>
@@ -84,14 +114,14 @@
             </ul>
             <h3>Links</h3>
             <ul>
-                <li><a class="project-link live-link" href="https://dil-o-dimagh.onrender.com/" target="_blank">Live</a>
-                </li>
+                <li><a class="project-link live-link" href="https://dil-o-dimagh.onrender.com/" target="_blank"
+                       aria-label="Live version of Dil-o-Dimagh blog">Live</a></li>
                 <li><a class="project-link live-link" href="https://github.com/mubashirzamir/dil-o-dimagh"
-                       target="_blank">Source</a></li>
+                       target="_blank" aria-label="Source code for Dil-o-Dimagh on GitHub">Source</a></li>
             </ul>
         </div>
 
-        <div id="portfolio" class="card">
+        <div id="portfolio" class="card" aria-label="Portfolio project">
             <h3>Portfolio</h3>
             <p>You are currently experiencing it.</p>
             <h3>Technologies</h3>
@@ -101,15 +131,16 @@
             </ul>
             <h3>Links</h3>
             <ul>
-                <li><a class="project-link live-link" href="#">Live</a></li>
+                <li><a class="project-link live-link" href="#" aria-label="Current portfolio page (live link)">Live</a>
+                </li>
                 <li><a class="project-link live-link" href="https://github.com/mubashirzamir/mubashirzamir.github.io"
-                       target="_blank">Source</a></li>
+                       target="_blank" aria-label="Source code for portfolio on GitHub">Source</a></li>
             </ul>
         </div>
     </div>
 </div>
 </body>
-<footer>
+<footer aria-label="Footer with copyright">
     <p>&copy; 2025 Mubashir Zamir. All rights reserved.</p>
 </footer>
 </html>
